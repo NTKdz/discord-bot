@@ -1,7 +1,6 @@
 package org.example;
 
 import net.dv8tion.jda.api.entities.Guild;
-import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.events.guild.voice.GuildVoiceUpdateEvent;
@@ -89,7 +88,7 @@ public class MyListener extends ListenerAdapter {
         var member = event.getMember();
         var user = member.getUser();
         Guild guild = event.getGuild();
-        TextChannel channel = guild.getTextChannelsByName("testing", true).getFirst();
+        TextChannel channel = guild.getTextChannelsByName("logging", true).getFirst();
 
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
